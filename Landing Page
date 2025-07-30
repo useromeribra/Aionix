@@ -1,0 +1,64 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
+export default function LandingPage() {
+  const [language, setLanguage] = useState("en");
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
+      <header className="p-8 flex justify-between items-center">
+        <h1 className="text-3xl font-bold">Aionix OS</h1>
+        <Select value={language} onValueChange={setLanguage}>
+          <SelectTrigger className="w-40">
+            <SelectValue placeholder="Language" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="en">English</SelectItem>
+            <SelectItem value="ar">Arabic</SelectItem>
+            <SelectItem value="fr">French</SelectItem>
+            <SelectItem value="es">Spanish</SelectItem>
+            <SelectItem value="zh">Chinese</SelectItem>
+            <SelectItem value="ru">Russian</SelectItem>
+            <SelectItem value="auto">Auto Detect</SelectItem>
+          </SelectContent>
+        </Select>
+      </header>
+
+      <main className="flex flex-col items-center justify-center text-center px-6 py-20">
+        <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+          Experience the Future of Intelligence
+        </h2>
+        <p className="text-lg text-gray-300 max-w-xl mb-8">
+          All-in-One AI Operating System for individuals, businesses, developers, and VIPs — with full multilingual support.
+        </p>
+        <Button className="px-8 py-4 text-lg rounded-2xl bg-blue-600 hover:bg-blue-700">
+          Get Started — It’s Free
+        </Button>
+        <div className="mt-10 text-sm text-gray-500">
+          Powered by Aionix Intelligence
+        </div>
+      </main>
+
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-10 py-20 text-center">
+        <div>
+          <h3 className="text-xl font-semibold mb-2">Instant AI Setup</h3>
+          <p className="text-gray-400">Deploy your AI tools and dashboards in seconds.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-2">Smart Marketplace</h3>
+          <p className="text-gray-400">Access and sell AI services to a global network.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-2">Multi-role Access</h3>
+          <p className="text-gray-400">Personal, Business, Developer, and VIP modes available.</p>
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold mb-2">400+ Language Support</h3>
+          <p className="text-gray-400">Automatic detection and manual selection of languages.</p>
+        </div>
+      </section>
+    </div>
+  );
+}
