@@ -1,0 +1,17 @@
+{
+  "welcome": "Welcome to Aionix",
+  "description": "The smartest AI platform in the world.",
+  "register": "Register",
+  "login": "Login",
+  "email": "Email",
+  "password": "Password",
+  "name": "Name",
+  "accountType": "Account Type",
+  "user": "User",
+  "business": "Business",
+  "vip": "VIP",
+  "developer": "Developer",
+  "submit": "Submit",
+  "language": "Language",
+  "landingCTA": "Get Started"
+}
